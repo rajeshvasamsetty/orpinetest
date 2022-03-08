@@ -7,8 +7,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         self.send_response(HTTPStatus.OK)
         self.end_headers()
-        self.wfile.write(b'Hello this is <name> and I would like to join Xylem
-'''')
+        self.wfile.write(b'Hello this is Rajesh Vasamsetty and I would like to join Xylem')
 
 
 httpd = socketserver.TCPServer(('', 8000), Handler)
@@ -19,5 +18,5 @@ httpd.serve_forever()
 # 127.0.0.1 - - [11/Apr/2017 11:36:49] "GET / HTTP/1.1" 200 -
 # http :8000
 '''
-Hello this is <name> and I would like to join Xylem
+Hello this is Rajesh Vasamsetty and I would like to join Xylem
 '''
